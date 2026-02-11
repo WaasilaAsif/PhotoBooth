@@ -24,7 +24,7 @@ const useCamera = () => {
 
       if (!videoRef.current)
         console.error("Video track is not being connected to current");
-      videoRef.current.srcObject = stream;
+        videoRef.current.srcObject = stream;
     } catch {
       console.error("Error connecting to the camera");
     }
