@@ -1,4 +1,7 @@
 .booth{
   background-image: url('BG.svg');
-  width: 100vh;
+  width: 100vw;
+  height: 90vh;
+  overflow-y: hidden;
+ margin-top: 10vh;
 }
