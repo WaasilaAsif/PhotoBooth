@@ -21,10 +21,10 @@ const useCamera = () => {
     
     // Check the current settings to confirm
     console.log("Current Settings:", videoTrack.getSettings());
-
-      if (!videoRef.current)
-        console.error("Video track is not being connected to current");
-        videoRef.current.srcObject = stream;
+    videoRef.current.srcObject = stream;
+  if (!videoRef.current){
+        console.error("Video track is not being connected to current");}
+        
     } catch {
       console.error("Error connecting to the camera");
     }
