@@ -1,7 +1,8 @@
 .booth{
-  background-image: url('BG.svg');
+  background-image: url('BG-1.svg');
+  background-size: contain;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   overflow-y: hidden;
  margin-top: 10vh;
 }
