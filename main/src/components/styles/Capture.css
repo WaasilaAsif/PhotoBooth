@@ -1,5 +1,21 @@
-.photobooth{
-    display: flex;
-    justify-content: space-between;
-    width : 30vw;    
+.photo-booth{
+     
+}
+.video-container{
+    border-radius: 10px;
+    align-self: center;
+    padding: 15px;
+    background-color: rgba(174, 44, 118, 0.5);
+    height: 45vh;
+    margin-top: 35%;
+    margin-left: 10vw;
+    max-width: 75vw;
+   
+}
+
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
 }

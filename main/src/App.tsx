@@ -7,8 +7,6 @@ import Booth from './components/Booth';
 function App() {
  return(
   <>
-  <nav className="navbar">
-  </nav>  
   <main className="booth">
     <Booth/>
   </main> 

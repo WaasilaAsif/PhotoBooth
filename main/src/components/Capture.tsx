@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef, useEffect } from 'react'
 import useCamera from '../hooks/useCamera'
 import useCanvas from '../hooks/useCanvas'
-
+import './styles/Capture.css'
 type Props = {};
 
 const Capture = (props: Props) => {
+  const [photos, setPhotos] = useState<string[]>([]);
   // 1. Get the video ref from your hook (The Source)
   const { videoRef } = useCamera();
   const {canvasRef, capturePhoto} = useCanvas(videoRef);
@@ -15,15 +16,18 @@ const Capture = (props: Props) => {
   }
 return(
   <>
-  <div className="video-container">
-    <video ref = {videoRef} autoPlay playsInline muted/>
-  </div>
-  <button onClick={startTimer}>
-    Ready?
-  </button>
-  <div className="canvas-container">
-
-    <canvas id='photo' ref = {canvasRef}/>
+  <div className='booth-container'>
+    <div className="stream">
+        <div className="video-container">
+          <video ref = {videoRef} autoPlay playsInline muted/>
+        </div>
+        <button onClick={startTimer}>
+        Ready?
+        </button>
+      </div>
+      <div className="canvas-container">
+        <canvas id='photo' ref = {canvasRef}/>
+      </div>
   </div>
   </>
 
