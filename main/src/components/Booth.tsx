@@ -7,7 +7,7 @@ const Booth = () =>{
  return(
   <>
   <div className="photo-booth">
-    <Capture></Capture>
+    <Capture/>
     </div>
   </>
  )

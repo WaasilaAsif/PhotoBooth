@@ -21,9 +21,12 @@ return(
         <div className="video-container">
           <video ref = {videoRef} autoPlay playsInline muted/>
         </div>
-        <button onClick={startTimer}>
+        {/* <button onClick={startTimer}>
         Ready?
-        </button>
+        </button> */}
+        <p className="lookin-good">
+          Looking Good
+        </p>
       </div>
       <div className="canvas-container">
         <canvas id='photo' ref = {canvasRef}/>
