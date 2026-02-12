@@ -17,17 +17,19 @@ const Capture = (props: Props) => {
 return(
   <>
   <div className='booth-container'>
+  <div className="left-section">
     <div className="stream">
         <div className="video-container">
           <video ref = {videoRef} autoPlay playsInline muted/>
         </div>
-        {/* <button onClick={startTimer}>
-        Ready?
-        </button> */}
         <p className="lookin-good">
           Looking Good
         </p>
-      </div>
+     </div>
+     <button className="snap">
+      READY??
+     </button>
+</div>
       <div className="canvas-container">
         <canvas id='photo' ref = {canvasRef}/>
       </div>
