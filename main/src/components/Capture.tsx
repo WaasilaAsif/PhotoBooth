@@ -6,14 +6,30 @@ import './styles/Capture.css'
 type Props = {};
 
 const Capture = (props: Props) => {
-  const [photos, setPhotos] = useState<string[]>([]);
+  const [photos, setPhotos] = useState <string[]>([]);
   // 1. Get the video ref from your hook (The Source)
   const { videoRef } = useCamera();
   const {canvasRef, capturePhoto} = useCanvas(videoRef);
-  
-  const startTimer=()=>{
-    const camera = setTimeout(capturePhoto, 5000);
+  const getOnePhoto = () =>{
+    const ImgURL = capturePhoto();
+    setPhotos(
+      currentPhotos => [
+        ...photos,
+        ImgURL
+      ]
+    );
   }
+  const startTimer=()=>{
+    const camera = setTimeout(getOnePhoto, 5000);
+  }
+  const getallPhotos = (num = 3) => {
+    if (num === 0) {
+       return;
+    } else {
+       getOnePhoto();
+       setTimeout(()=>{getallPhotos(num-1)},5000);
+}
+ }
 return(
   <>
   <div className='booth-container'>

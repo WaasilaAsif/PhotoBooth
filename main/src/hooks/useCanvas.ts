@@ -15,6 +15,8 @@ const useCanvas = (videoRef) => {
       // Draw the current video frame onto the canvas
       const ctx = canvas.getContext('2d');
       ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const data = canvas.toDataURL('img/jpeg');
+      return data;
     }
 };
 return {canvasRef, capturePhoto};
